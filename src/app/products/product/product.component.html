@@ -1,0 +1,28 @@
+<div class="font-sans rounded-2xl border-2 grid grid-cols-2 p-2 m-2">
+  <div class="">
+    <img [src]="product.image" alt="" class="relative inset-0 w-full object-contain p-3" loading="lazy"/>
+  </div>
+  <form class="p-1">
+    <div class="flex flex-wrap">
+      <h2 class="flex-auto text-sm font-semibold text-slate-900">
+        {{product.title}}
+      </h2>
+      <div class="text-lg font-semibold text-slate-500 w-full align-middle p-2">
+        {{product.price | currency}}
+      </div>
+      <button type="button"
+              (click)="description = !description"
+              [ngClass]="description ?
+          'bg-red-500 hover:bg-red-700' :
+          'bg-blue-500 hover:bg-blue-700'"
+              class="text-white font-bold py-2 px-4 rounded p-2"
+      >Description
+      </button>
+      <div class="w-full flex-none text-sm font-medium text-slate-700 mt-2"
+           [ngClass]="description ?  'visible' : 'hidden'"
+      >
+        {{product.description}}
+      </div>
+    </div>
+  </form>
+</div>

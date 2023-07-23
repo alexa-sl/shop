@@ -1,0 +1,9 @@
+<h1 class="text-3xl text-center m-3">
+  Products list
+</h1>
+<div *ngIf="!loaded" class="text-center">Loading...</div>
+<div class="grid grid-cols-4">
+  <div *ngFor="let product of products">
+    <shop-product [product]="product"></shop-product>
+  </div>
+</div>
