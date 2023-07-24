@@ -5,16 +5,22 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import {ProductsModule} from "./products/products.module";
 import {HttpClientModule} from "@angular/common/http";
+import {TestFeaturesModule} from "./testFeatures/testFeatures.module";
+import { HeroComponent } from './testFeatures/hero/hero.component';
+import {ReactiveFormsModule} from "@angular/forms";
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    HeroComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    ProductsModule
+    ProductsModule,
+    TestFeaturesModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

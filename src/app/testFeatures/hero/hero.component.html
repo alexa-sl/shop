@@ -1,0 +1,17 @@
+<form
+  (ngSubmit)="submit($event)"
+  [formGroup]="form" novalidate
+  class="px-4 py-3 rounded-full"
+>
+  <input
+    type="text"
+    formControlName="name"
+    class="form-input px-4 py-3 rounded-full"/>
+  <button
+    type="submit"
+    class="m-3 px-4 py-2 font-semibold text-sm bg-cyan-500 text-white rounded-full shadow-sm"
+  >
+    Show hero name
+  </button>
+</form>
+<app-required name='test'></app-required>
